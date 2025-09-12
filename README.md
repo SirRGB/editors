@@ -13,3 +13,12 @@ Name | aliases | path | size
 [nice editor](https://github.com/vigna/ne/?tab=readme-ov-file#ports) | ne | /usr/bin/ne | 520K
 [neovim](https://github.com/neovim/neovim?tab=readme-ov-file#install-from-package) | nvim | /usr/bin/nvim | 5M
 [vim](https://github.com/vim/vim) | vim, vi | /usr/bin/vi -> /usr/bin/vim.basic<br>/usr/bin/vim -> /usr/bin/vim.basic | 3.8M
+
+
+### Makefile
+- make all
+  - build and run the container
+- make build
+  - build the container
+- make run
+  - run and enter the container
