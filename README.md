@@ -14,6 +14,7 @@ Name | aliases | path | size
 [nice editor](https://github.com/vigna/ne/?tab=readme-ov-file#ports) | ne | /usr/bin/ne | 520K
 [neovim](https://github.com/neovim/neovim?tab=readme-ov-file#install-from-package) | nvim | /usr/bin/nvim | 5M
 [tilde](https://os.ghalkes.nl/tilde/download.html) | tilde | /usr/bin/tilde | 440K
+[viele](https://invisible-island.net/vile/#packages) | vile | /usr/bin/vile | 1.3M
 [vim](https://github.com/vim/vim) | vim, vi | /usr/bin/vi -> /usr/bin/vim.basic<br>/usr/bin/vim -> /usr/bin/vim.basic | 3.8M
 [yi](http://yi-editor.github.io/pages/installing) | yi | /usr/bin/yi | 35M
 [zile](https://www.gnu.org/software/zile) | zile | /usr/bin/zile | 320K

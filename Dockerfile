@@ -23,6 +23,7 @@ RUN install_packages \
     ne \
     neovim \
     tilde \
+    vile \
     vim \
     yi \
     zile \
