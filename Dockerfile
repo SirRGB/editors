@@ -19,6 +19,7 @@ RUN install_packages \
     kakoune \
     kilo \
     mc \
+    mg \
     micro \
     mle \
     nano \

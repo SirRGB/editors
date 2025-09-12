@@ -10,6 +10,7 @@ Name | aliases | path | size
 [kakoune](https://github.com/mawww/kakoune?tab=readme-ov-file#installing) | kak | /usr/bin/kak | 3.2M
 [kilo](https://github.com/antirez/kilo) | kilo | /usr/bin/kilo | 32K
 [mc](https://github.com/MidnightCommander/mc) | mcedit | /usr/bin/mcedit -> /usr/bin/mc | 1.1M
+[mg](https://github.com/ibara/mg) | mg | /usr/bin/mg | 220K
 [micro](https://github.com/zyedidia/micro?tab=readme-ov-file#package-managers) | micro | /usr/bin/micro | 15M
 [mle](https://github.com/adsr/mle?tab=readme-ov-file#installing-from-a-repo) | mle | /usr/bin/mle | 284K
 [nano](https://www.nano-editor.org/download.php) | nano | /usr/bin/nano | 300K
