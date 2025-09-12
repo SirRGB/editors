@@ -8,6 +8,10 @@ RUN install_packages \
     nano \
     ne \
     neovim \
-    vim
+    vim \
+# clear
+    ncurses-bin
 
 COPY ./*.txt /root
+COPY ./README.md /root
+WORKDIR /root
