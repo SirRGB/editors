@@ -25,6 +25,7 @@ RUN install_packages \
     tilde \
     vim \
     yi \
+    zile \
 # clear
     ncurses-bin
 
