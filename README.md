@@ -12,6 +12,7 @@ Name | aliases | path | size
 [nano](https://www.nano-editor.org/download.php) | nano | /usr/bin/nano | 300K
 [nice editor](https://github.com/vigna/ne/?tab=readme-ov-file#ports) | ne | /usr/bin/ne | 520K
 [neovim](https://github.com/neovim/neovim?tab=readme-ov-file#install-from-package) | nvim | /usr/bin/nvim | 5M
+[tilde](https://os.ghalkes.nl/tilde/download.html) | tilde | /usr/bin/tilde | 440K
 [vim](https://github.com/vim/vim) | vim, vi | /usr/bin/vi -> /usr/bin/vim.basic<br>/usr/bin/vim -> /usr/bin/vim.basic | 3.8M
 
 
