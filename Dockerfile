@@ -24,6 +24,7 @@ RUN install_packages \
     neovim \
     tilde \
     vim \
+    yi \
 # clear
     ncurses-bin
 
