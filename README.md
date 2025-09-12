@@ -1,4 +1,5 @@
 # CLI Editors
+All sizes are taken from du, which uses factors of 1024 i.e. Kibibyte/Mebibyte
 
 Name | aliases | path | size
 ---|---|---|---|
