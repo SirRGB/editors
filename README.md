@@ -8,6 +8,7 @@ Name | aliases | path | size
 [helix](https://github.com/helix-editor/helix?tab=readme-ov-file#installation) | hx | /usr/bin/hx -> /usr/lib/hx/hx | 17M
 [jed](https://www.jedsoft.org/jed/download.html) | jed | /usr/bin/jed | 356K
 [kakoune](https://github.com/mawww/kakoune?tab=readme-ov-file#installing) | kak | /usr/bin/kak | 3.2M
+[kibi](https://github.com/ilai-deutel/kibi?tab=readme-ov-file#installation) | kibi | /usr/local/bin/kibi | 728K
 [kilo](https://github.com/antirez/kilo) | kilo | /usr/bin/kilo | 32K
 [mc](https://github.com/MidnightCommander/mc) | mcedit | /usr/bin/mcedit -> /usr/bin/mc | 1.1M
 [mg](https://github.com/ibara/mg) | mg | /usr/bin/mg | 220K

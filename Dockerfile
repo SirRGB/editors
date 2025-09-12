@@ -2,6 +2,7 @@ FROM docker.io/bitnami/minideb:trixie
 
 ARG BUILD_PACKAGES="\
     ca-certificates \
+    cargo \
     gnupg \
     wget \
     xz-utils"
@@ -40,9 +41,14 @@ RUN wget https://github.com/xyproto/orbiton/releases/download/v2.70.0/orbiton-2.
     tar xf /tmp/orbiton-2.70.0-linux_x86_64_static.tar.xz --directory=/tmp && \
     mv /tmp/orbiton-2.70.0-linux_x86_64_static/o /usr/local/bin/o
 
+RUN cargo install kibi && \
+    mv /root/.cargo/bin/kibi /usr/local/bin/kibi
+
 RUN apt remove -y \
     ${BUILD_PACKAGES}
 RUN apt autoremove -y
+
+RUN rm -r /tmp/* /root/.cargo /root/.wget-hsts
 
 COPY ./*.txt /root
 COPY ./README.md /root
