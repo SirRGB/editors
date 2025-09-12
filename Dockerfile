@@ -4,6 +4,7 @@ RUN install_packages \
     emacs \
 #    helix \
     kakoune \
+    mc \
     micro \
     nano \
     ne \
