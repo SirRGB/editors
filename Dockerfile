@@ -3,6 +3,7 @@ FROM docker.io/bitnami/minideb:trixie
 RUN install_packages \
     emacs \
     hx \
+    jed \
     kakoune \
     mc \
     micro \
