@@ -8,6 +8,7 @@ Name | aliases | path | size
 [helix](https://github.com/helix-editor/helix?tab=readme-ov-file#installation) | hx | /usr/bin/hx -> /usr/lib/hx/hx | 17M
 [jed](https://www.jedsoft.org/jed/download.html) | jed | /usr/bin/jed | 356K
 [kakoune](https://github.com/mawww/kakoune?tab=readme-ov-file#installing) | kak | /usr/bin/kak | 3.2M
+[kilo](https://github.com/antirez/kilo) | kilo | /usr/bin/kilo | 32K
 [mc](https://github.com/MidnightCommander/mc) | mcedit | /usr/bin/mcedit -> /usr/bin/mc | 1.1M
 [micro](https://github.com/zyedidia/micro?tab=readme-ov-file#package-managers) | micro | /usr/bin/micro | 15M
 [mle](https://github.com/adsr/mle?tab=readme-ov-file#installing-from-a-repo) | mle | /usr/bin/mle | 284K

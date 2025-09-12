@@ -17,6 +17,7 @@ RUN install_packages \
     hx \
     jed \
     kakoune \
+    kilo \
     mc \
     micro \
     mle \
