@@ -20,6 +20,7 @@ RUN install_packages \
     micro \
     mle \
     nano \
+    nano-tiny \
     ne \
     neovim \
     tilde \

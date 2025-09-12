@@ -11,6 +11,7 @@ Name | aliases | path | size
 [micro](https://github.com/zyedidia/micro?tab=readme-ov-file#package-managers) | micro | /usr/bin/micro | 15M
 [mle](https://github.com/adsr/mle?tab=readme-ov-file#installing-from-a-repo) | mle | /usr/bin/mle | 284K
 [nano](https://www.nano-editor.org/download.php) | nano | /usr/bin/nano | 300K
+[nano-tiny](https://www.nano-editor.org/download.php) | nano-tiny | /usr/bin/nano-tiny | 84K
 [nice editor](https://github.com/vigna/ne/?tab=readme-ov-file#ports) | ne | /usr/bin/ne | 520K
 [neovim](https://github.com/neovim/neovim?tab=readme-ov-file#install-from-package) | nvim | /usr/bin/nvim | 5M
 [tilde](https://os.ghalkes.nl/tilde/download.html) | tilde | /usr/bin/tilde | 440K
