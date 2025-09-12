@@ -3,6 +3,7 @@
 Name | aliases | path | size
 ---|---|---|---|
 [emacs](https://www.gnu.org/software/emacs/download.html#gnu-linux) | emacs | /usr/bin/emacs -> /usr/bin/emacs-gtk | 11M
+[helix](https://github.com/helix-editor/helix?tab=readme-ov-file#installation) | hx | /usr/bin/hx -> /usr/lib/hx/hx | 17M
 [kakoune](https://github.com/mawww/kakoune?tab=readme-ov-file#installing) | kak | /usr/bin/kak | 3.2M
 [mc](https://github.com/MidnightCommander/mc) | mcedit | /usr/bin/mcedit -> /usr/bin/mc | 1.1M
 [micro](https://github.com/zyedidia/micro?tab=readme-ov-file#package-managers) | micro | /usr/bin/micro | 15M
