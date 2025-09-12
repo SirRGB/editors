@@ -3,7 +3,8 @@ FROM docker.io/bitnami/minideb:trixie
 ARG BUILD_PACKAGES="\
     ca-certificates \
     gnupg \
-    wget"
+    wget \
+    xz-utils"
 
 RUN install_packages \
     ${BUILD_PACKAGES}
@@ -34,6 +35,10 @@ RUN install_packages \
     zile \
 # clear
     ncurses-bin
+
+RUN wget https://github.com/xyproto/orbiton/releases/download/v2.70.0/orbiton-2.70.0-linux_x86_64_static.tar.xz --directory-prefix=/tmp && \
+    tar xf /tmp/orbiton-2.70.0-linux_x86_64_static.tar.xz --directory=/tmp && \
+    mv /tmp/orbiton-2.70.0-linux_x86_64_static/o /usr/local/bin/o
 
 RUN apt remove -y \
     ${BUILD_PACKAGES}
