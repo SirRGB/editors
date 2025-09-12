@@ -12,7 +12,7 @@ RUN wget -O- https://download.opensuse.org/download/repositories/home:/gphalkes:
     echo "deb [signed-by=/etc/apt/keyrings/tilde.gpg] http://download.opensuse.org/repositories/home:/gphalkes:/tilde/xUbuntu_25.04 /" > /etc/apt/sources.list.d/tilde.list
 
 RUN install_packages \
-    emacs \
+    emacs-nox \
     hx \
     jed \
     kakoune \
