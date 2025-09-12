@@ -29,6 +29,7 @@ RUN install_packages \
     tilde \
     vile \
     vim \
+    vis \
     yi \
     zile \
 # clear

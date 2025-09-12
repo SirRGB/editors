@@ -20,6 +20,7 @@ Name | aliases | path | size
 [tilde](https://os.ghalkes.nl/tilde/download.html) | tilde | /usr/bin/tilde | 440K
 [viele](https://invisible-island.net/vile/#packages) | vile | /usr/bin/vile | 1.3M
 [vim](https://github.com/vim/vim) | vim, vi | /usr/bin/vi -> /usr/bin/vim.basic<br>/usr/bin/vim -> /usr/bin/vim.basic | 3.8M
+[vis](https://github.com/martanne/vis) | vis | /usr/bin/vis | 364K
 [yi](http://yi-editor.github.io/pages/installing) | yi | /usr/bin/yi | 35M
 [zile](https://www.gnu.org/software/zile) | zile | /usr/bin/zile | 320K
 
