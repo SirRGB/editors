@@ -4,6 +4,8 @@ ARG BUILD_PACKAGES="\
     ca-certificates \
     cargo \
     gnupg \
+    make \
+    unzip \
     wget \
     xz-utils"
 
@@ -43,6 +45,10 @@ RUN wget https://github.com/xyproto/orbiton/releases/download/v2.70.0/orbiton-2.
 
 RUN cargo install kibi && \
     mv /root/.cargo/bin/kibi /usr/local/bin/kibi
+
+RUN wget https://github.com/qemacs/qemacs/archive/refs/heads/master.zip --directory-prefix=/tmp && \
+    unzip /tmp/master.zip -d /tmp && \
+    cd /tmp/qemacs-master && ./configure && make && make install
 
 RUN apt remove -y \
     ${BUILD_PACKAGES}
