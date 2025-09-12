@@ -18,6 +18,7 @@ RUN install_packages \
     kakoune \
     mc \
     micro \
+    mle \
     nano \
     ne \
     neovim \
