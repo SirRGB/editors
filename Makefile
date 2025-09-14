@@ -1,7 +1,7 @@
 all: build run
 
 build:
-	docker build . -t editors
+	docker build . --tag editors
 
 run:
-	docker run -i -t editors
+	docker run --interactive --tty editors
