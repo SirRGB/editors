@@ -4,6 +4,7 @@ All sizes are taken from du, which uses factors of 1024 i.e. Kibibyte/Mebibyte
 Name | aliases | path | size
 ---|---|---|---|
 [e3](https://texteditors.org/cgi-bin/wiki.pl?E3) | e3 | /usr/bin/e3 | 16K
+[edit](https://github.com/microsoft/edit?tab=readme-ov-file#installation) | edit | /usr/local/bin/edit | 220K
 [emacs](https://www.gnu.org/software/emacs/download.html#gnu-linux) | emacs | /usr/bin/emacs -> /usr/bin/emacs-gtk | 11M
 [helix](https://github.com/helix-editor/helix?tab=readme-ov-file#installation) | hx | /usr/bin/hx -> /usr/lib/hx/hx | 17M
 [jed](https://www.jedsoft.org/jed/download.html) | jed | /usr/bin/jed | 356K

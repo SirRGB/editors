@@ -7,7 +7,8 @@ ARG BUILD_PACKAGES="\
     make \
     unzip \
     wget \
-    xz-utils"
+    xz-utils \
+    zstd"
 
 RUN install_packages \
     ${BUILD_PACKAGES}
@@ -49,6 +50,10 @@ RUN cargo install kibi && \
 RUN wget https://github.com/qemacs/qemacs/archive/refs/heads/master.zip --directory-prefix=/tmp && \
     unzip /tmp/master.zip -d /tmp && \
     cd /tmp/qemacs-master && ./configure && make && make install
+
+RUN wget https://github.com/microsoft/edit/releases/download/v1.2.0/edit-1.2.0-x86_64-linux-gnu.tar.zst --directory-prefix=/tmp && \
+    zstd --decompress /tmp/edit-1.2.0-x86_64-linux-gnu.tar.zst && tar xf /tmp/edit-1.2.0-x86_64-linux-gnu.tar --directory=/tmp && \
+    mv /tmp/edit /usr/local/bin/edit
 
 RUN apt remove -y \
     ${BUILD_PACKAGES}
