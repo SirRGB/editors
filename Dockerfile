@@ -1,4 +1,4 @@
-FROM docker.io/bitnami/minideb:trixie
+FROM docker.io/debian:trixie-slim
 
 ARG BUILD_PACKAGES="\
     ca-certificates \
@@ -10,13 +10,13 @@ ARG BUILD_PACKAGES="\
     xz-utils \
     zstd"
 
-RUN install_packages \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     ${BUILD_PACKAGES}
 
 RUN wget -O- https://download.opensuse.org/download/repositories/home:/gphalkes:/tilde/xUbuntu_25.04/Release.key | gpg --dearmor | tee /etc/apt/keyrings/tilde.gpg && \
     echo "deb [signed-by=/etc/apt/keyrings/tilde.gpg] http://download.opensuse.org/repositories/home:/gphalkes:/tilde/xUbuntu_25.04 /" > /etc/apt/sources.list.d/tilde.list
 
-RUN install_packages \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     e3 \
     emacs-nox \
     hx \
@@ -59,7 +59,7 @@ RUN apt remove -y \
     ${BUILD_PACKAGES}
 RUN apt autoremove -y
 
-RUN rm -r /tmp/* /root/.cargo /root/.wget-hsts
+RUN rm -r /tmp/* /root/.cargo /root/.wget-hsts /var/lib/apt/lists /var/cache/apt/archives
 
 COPY ./*.txt /root
 COPY ./README.md /root
