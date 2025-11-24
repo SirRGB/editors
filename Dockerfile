@@ -44,7 +44,7 @@ RUN wget https://github.com/xyproto/orbiton/releases/download/v2.70.0/orbiton-2.
     tar xf /tmp/orbiton-2.70.0-linux_x86_64_static.tar.xz --directory=/tmp && \
     mv /tmp/orbiton-2.70.0-linux_x86_64_static/o /usr/local/bin/o
 
-RUN cargo install kibi && \
+RUN cargo install kibi@0.3.1 && \
     mv /root/.cargo/bin/kibi /usr/local/bin/kibi
 
 RUN wget https://github.com/qemacs/qemacs/archive/refs/heads/master.zip --directory-prefix=/tmp && \
