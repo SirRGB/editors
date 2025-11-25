@@ -5,23 +5,26 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq && DEBIAN_FRONTEND=noninte
     cargo \
     gnupg \
     make \
+    parallel \
     unzip \
     wget \
     xz-utils \
     zstd
 
-RUN wget -O- https://download.opensuse.org/download/repositories/home:/gphalkes:/tilde/xUbuntu_25.04/Release.key | gpg --dearmor | tee /etc/apt/keyrings/tilde.gpg
-
-RUN cargo install kibi@0.3.1
-
-RUN wget https://github.com/xyproto/orbiton/releases/download/v2.70.4/orbiton-2.70.4-linux_x86_64_static.tar.xz --directory-prefix=/tmp && \
-    tar xf /tmp/orbiton-2.70.4-linux_x86_64_static.tar.xz --directory=/tmp
-
-RUN wget https://github.com/qemacs/qemacs/archive/refs/heads/master.zip --directory-prefix=/tmp && \
-    unzip /tmp/master.zip -d /tmp && cd /tmp/qemacs-master && ./configure && make && make install
-
-RUN wget https://github.com/microsoft/edit/releases/download/v1.2.0/edit-1.2.0-x86_64-linux-gnu.tar.zst --directory-prefix=/tmp && \
-    zstd --decompress /tmp/edit-1.2.0-x86_64-linux-gnu.tar.zst && tar xf /tmp/edit-1.2.0-x86_64-linux-gnu.tar --directory=/tmp
+RUN parallel :::\
+# tilde
+    "wget -O- https://download.opensuse.org/download/repositories/home:/gphalkes:/tilde/xUbuntu_25.04/Release.key | gpg --dearmor | tee /etc/apt/keyrings/tilde.gpg" \
+# kibi
+    "cargo install kibi@0.3.1" \
+# orbiton
+    "wget https://github.com/xyproto/orbiton/releases/download/v2.70.4/orbiton-2.70.4-linux_x86_64_static.tar.xz --directory-prefix=/tmp && \
+    tar xf /tmp/orbiton-2.70.4-linux_x86_64_static.tar.xz --directory=/tmp" \
+# qemacs
+    "wget https://github.com/qemacs/qemacs/archive/refs/heads/master.zip --directory-prefix=/tmp && \
+    unzip /tmp/master.zip -d /tmp && cd /tmp/qemacs-master && ./configure && make && make install" \
+# edit
+    "wget https://github.com/microsoft/edit/releases/download/v1.2.0/edit-1.2.0-x86_64-linux-gnu.tar.zst --directory-prefix=/tmp && \
+    zstd --decompress /tmp/edit-1.2.0-x86_64-linux-gnu.tar.zst && tar xf /tmp/edit-1.2.0-x86_64-linux-gnu.tar --directory=/tmp"
 
 
 FROM docker.io/debian:trixie-slim AS runner
