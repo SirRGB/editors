@@ -1,10 +1,10 @@
 all: build run
 
 build:
-	docker build . --tag sirrgb/editors
+	docker build . --tag docker.io/sirrgb/editors:latest
 
 run:
-	docker run --interactive --tty sirrgb/editors
+	docker run --interactive --tty docker.io/sirrgb/editors:latest
 
 publish:
-	docker push sirrgb/editors
+	docker image push docker.io/sirrgb/editors:latest
