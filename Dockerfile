@@ -63,7 +63,7 @@ COPY --from=builder /usr/local/bin/qe /usr/local/bin/qemacs /usr/local/bin
 COPY --from=builder /tmp/edit /usr/local/bin/edit
 
 
-RUN rm -r /var/lib/apt/lists /var/cache/apt/archives
+RUN rm --recursive /var/lib/apt/lists /var/cache/apt/archives
 
 COPY ./*.txt ./README.md /root
 WORKDIR /root
