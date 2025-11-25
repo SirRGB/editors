@@ -28,6 +28,7 @@ RUN parallel :::\
 
 
 FROM docker.io/debian:trixie-slim AS runner
+ARG INSTALL_PATH=/usr/local/bin
 
 COPY --from=builder /etc/apt/keyrings/tilde.gpg /etc/apt/keyrings/tilde.gpg
 RUN echo "deb [signed-by=/etc/apt/keyrings/tilde.gpg] http://download.opensuse.org/repositories/home:/gphalkes:/tilde/xUbuntu_25.04 /" > /etc/apt/sources.list.d/tilde.list
@@ -57,13 +58,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq && DEBIAN_FRONTEND=noninte
     yi \
     zile
 
-COPY --from=builder /root/.cargo/bin/kibi /usr/local/bin/kibi
+COPY --from=builder /root/.cargo/bin/kibi "${INSTALL_PATH}"/kibi
 
-COPY --from=builder /tmp/orbiton-2.70.4-linux_x86_64_static/o /usr/local/bin/o
+COPY --from=builder /tmp/orbiton-2.70.4-linux_x86_64_static/o "${INSTALL_PATH}"/o
 
-COPY --from=builder /usr/local/bin/qe /usr/local/bin/qemacs /usr/local/bin
+COPY --from=builder /usr/local/bin/qe /usr/local/bin/qemacs "${INSTALL_PATH}"/
 
-COPY --from=builder /tmp/edit /usr/local/bin/edit
+COPY --from=builder /tmp/edit "${INSTALL_PATH}"/edit
 
 
 RUN rm --recursive /var/lib/apt/lists /var/cache/apt/archives
