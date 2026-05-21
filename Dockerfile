@@ -17,8 +17,8 @@ RUN parallel :::\
 # kibi
     "cargo install kibi@0.3.1" \
 # orbiton
-    "wget https://github.com/xyproto/orbiton/releases/download/v2.73.1/orbiton-2.73.1-linux_x86_64_static.tar.xz --directory-prefix=/tmp && \
-    tar xf /tmp/orbiton-2.73.1-linux_x86_64_static.tar.xz --directory=/tmp --no-same-owner" \
+    "wget https://github.com/xyproto/orbiton/releases/download/v2.74.2/orbiton-2.74.2-linux_x86_64_static.tar.xz --directory-prefix=/tmp && \
+    tar xf /tmp/orbiton-2.74.2-linux_x86_64_static.tar.xz --directory=/tmp --no-same-owner" \
 # qemacs
     "wget https://github.com/qemacs/qemacs/archive/refs/heads/master.zip --directory-prefix=/tmp && \
     unzip /tmp/master.zip -d /tmp && cd /tmp/qemacs-master && ./configure && make && make install" \
@@ -60,7 +60,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq && DEBIAN_FRONTEND=noninte
 
 COPY --from=builder /root/.cargo/bin/kibi "${INSTALL_PATH}"/kibi
 
-COPY --from=builder /tmp/orbiton-2.73.1-linux_x86_64_static/o "${INSTALL_PATH}"/o
+COPY --from=builder /tmp/orbiton-2.74.2-linux_x86_64_static/o "${INSTALL_PATH}"/o
 
 COPY --from=builder /usr/local/bin/qe /usr/local/bin/qemacs "${INSTALL_PATH}"/
 
