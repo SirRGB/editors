@@ -8,8 +8,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq && DEBIAN_FRONTEND=noninte
     parallel \
     unzip \
     wget \
-    xz-utils \
-    zstd
+    xz-utils
 
 RUN parallel :::\
 # tilde
@@ -23,8 +22,8 @@ RUN parallel :::\
     "wget https://github.com/qemacs/qemacs/archive/refs/heads/master.zip --directory-prefix=/tmp && \
     unzip /tmp/master.zip -d /tmp && cd /tmp/qemacs-master && ./configure && make && make install" \
 # edit
-    "wget https://github.com/microsoft/edit/releases/download/v1.2.0/edit-1.2.0-x86_64-linux-gnu.tar.zst --directory-prefix=/tmp && \
-    zstd --decompress /tmp/edit-1.2.0-x86_64-linux-gnu.tar.zst && tar xf /tmp/edit-1.2.0-x86_64-linux-gnu.tar --directory=/tmp"
+    "wget https://github.com/microsoft/edit/releases/download/v2.0.0/edit-2.0.0-x86_64-linux-gnu.tar.gz --directory-prefix=/tmp && \
+    tar zxf /tmp/"edit-2.0.0-x86_64-linux-gnu.tar.gz" --directory=/tmp"
 
 
 FROM docker.io/debian:trixie-slim AS runner
